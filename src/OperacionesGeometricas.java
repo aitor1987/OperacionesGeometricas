@@ -45,31 +45,26 @@ public static void main(String[] ar) {
 
 		else{
 
-			double altura, base, perimetro, superficie;
+			double altura, base, peri, area;
 
 			System.out.println("\nVamos a calcular la superficie y el perimetro de un rectangulo");
 			System.out.println("\nIntroduce la altura del rectangulo");
 
 			altura = sc.nextDouble();
-			
+			rec.setAltura(altura);			
 
 			System.out.println("\nAhora introduce la base del rectangulo");
 
 			base = sc.nextDouble();
-			rec.setMedidas(base, altura);			
+			rec.setBase(base);			
 
 			//perimetro = rec.perimetro();
 			//superficie = rec.superficie();
 
 			//System.out.println("\nCon una altura de: "+ rec.getAltura() + " y una anchura de: "+ rec.getBase() +"...");
-			System.out.println("La superficie del rectangulo es: "+ rec.getSuperficie());
-			System.out.println("\ny el perimetro es: "+ rec.getPerimetro());
+			System.out.println("La superficie del rectangulo es: "+ rec.Area());
+			System.out.println("\ny el perimetro es: "+ rec.Peri());
 		}
 	}
 }
-
-
-
-
-
 
