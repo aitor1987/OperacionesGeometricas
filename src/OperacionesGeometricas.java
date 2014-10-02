@@ -22,7 +22,7 @@ public static void main(String[] ar) {
 
 		while(!opcion.equalsIgnoreCase("circulo")&&!opcion.equalsIgnoreCase("rectangulo")){
 
-			System.out.println("\nVa a ser que no has escrito bien...");
+			System.out.println("\n no lo has escrito bien...");
 			System.out.println("\nPrueba otra vez...");
 
 			opcion = sc.next();
