@@ -58,10 +58,7 @@ public static void main(String[] ar) {
 			base = sc.nextDouble();
 			rec.setBase(base);			
 
-			//perimetro = rec.perimetro();
-			//superficie = rec.superficie();
 
-			//System.out.println("\nCon una altura de: "+ rec.getAltura() + " y una anchura de: "+ rec.getBase() +"...");
 			System.out.println("La superficie del rectangulo es: "+ rec.Area());
 			System.out.println("\ny el perimetro es: "+ rec.Peri());
 		}
