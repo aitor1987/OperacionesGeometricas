@@ -7,8 +7,7 @@ public class OperacionesGeometricas {
 
 
 public static void main(String[] ar) {
-
-		String opcion;
+char opcion;
 
 		Scanner sc = new Scanner(System.in);
 		Circulo cir = new Circulo();
@@ -17,18 +16,18 @@ public static void main(String[] ar) {
 		System.out.println("\nDe que figura quieres hacer los cálculos?");
 		System.out.println("\nEscribe 'c'(circulo)   'r'(rectangulo)   't'(terminar).");
 
-		opcion = sc.next();
+		opcion = sc.next().charAt(0);
 
 
-		while(!opcion.equalsIgnoreCase("c")&&!opcion.equalsIgnoreCase("r")&&!opcion.equalsIgnoreCase("t")){
+		while(opcion!='c'&&opcion!='r'&&opcion!='t'){
 
 			System.out.println("\nNo has seleccionado ninguna de las opciones dadas ");
 			System.out.println("\nPrueba otra vez...");
 
-			opcion = sc.next();
+			opcion = sc.next().charAt(0);
 		}
 
-		if(opcion.equals("C")) {
+		if(opcion=='c') {
 
 			double radio, area, circu;
 			System.out.println("\nVamos a calcular el área y circunferencia de un " + opcion);
@@ -43,7 +42,7 @@ public static void main(String[] ar) {
 			System.out.println("La circunferencia del círculo es: " +circu);
 		}
 
-		if(opcion.equals("R")){
+		if(opcion=='r'){
 
 			double altura, base, peri, area;
 
@@ -63,7 +62,7 @@ public static void main(String[] ar) {
 			System.out.println("\ny el perimetro es: "+ rec.Peri());
 		}
 
-		if(opcion.equals("T")){
+		if(opcion=='t'){
 
 			System.out.println("\nHas seleccionado terminar, hasta otra");
 }
