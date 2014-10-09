@@ -15,20 +15,20 @@ public static void main(String[] ar) {
 		Rectangulo rec = new Rectangulo();
 
 		System.out.println("\nDe que figura quieres hacer los cálculos?");
-		System.out.println("\nEscribe `circulo´ o `rectangulo´...");
+		System.out.println("\nEscribe 'c'(circulo)   'r'(rectangulo)   't'(terminar).");
 
 		opcion = sc.next();
 
 
-		while(!opcion.equalsIgnoreCase("circulo")&&!opcion.equalsIgnoreCase("rectangulo")){
+		while(!opcion.equalsIgnoreCase("c")&&!opcion.equalsIgnoreCase("r")&&!opcion.equalsIgnoreCase("t")){
 
-			System.out.println("\nVa a ser que no has escrito bien...");
+			System.out.println("\nNo has seleccionado ninguna de las opciones dadas ");
 			System.out.println("\nPrueba otra vez...");
 
 			opcion = sc.next();
 		}
 
-		if(opcion.equals("circulo")) {
+		if(opcion.equals("C")) {
 
 			double radio, area, circu;
 			System.out.println("\nVamos a calcular el área y circunferencia de un " + opcion);
@@ -43,7 +43,7 @@ public static void main(String[] ar) {
 			System.out.println("La circunferencia del círculo es: " +circu);
 		}
 
-		else{
+		if(opcion.equals("R")){
 
 			double altura, base, peri, area;
 
@@ -58,13 +58,15 @@ public static void main(String[] ar) {
 			base = sc.nextDouble();
 			rec.setBase(base);			
 
-			//perimetro = rec.perimetro();
-			//superficie = rec.superficie();
 
-			//System.out.println("\nCon una altura de: "+ rec.getAltura() + " y una anchura de: "+ rec.getBase() +"...");
 			System.out.println("La superficie del rectangulo es: "+ rec.Area());
 			System.out.println("\ny el perimetro es: "+ rec.Peri());
 		}
+
+		if(opcion.equals("T")){
+
+			System.out.println("\nHas seleccionado terminar, hasta otra");
+}
 	}
 }
 
